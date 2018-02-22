@@ -1,0 +1,37 @@
+{
+  "name": "all-the-cities-mongodb",
+  "version": "1.0.0",
+  "description": "All the Cities data import ready for MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js > cities.pbf",
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nabilashraf/all-the-cities-mongodb.git"
+  },
+  "keywords": [
+    "city",
+    "cities",
+    "geolocation",
+    "latitude",
+    "longitude",
+    "gis",
+    "world",
+    "geography",
+    "location",
+    "mongodb",
+    "geoSpatialSearch"
+  ],
+  "author": {
+    "name": "Nabil Ashraf",
+    "email": "nabilashraf@chumchum.agency",
+    "url": "https://chumchum.agency"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nabilashraf/all-the-cities-mongodb/issues"
+  },
+  "homepage": "https://github.com/nabilashraf/all-the-cities-mongodb#readme"
+}
