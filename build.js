@@ -23,35 +23,37 @@ var rowStream = through(function (line, enc, next) {
         return acc
     }, {})
     if (!row.id) return
-
     pbf.writeRawMessage(writeCity, row)
 
     next()
 })
 
 function writeCity(city, pbf) {
-    pbf.writeStringField(1, city.name)
-    pbf.writeStringField(2, city.country)
-
+    pbf.writeSVarintField(1, city.id)
+    pbf.writeStringField(2, city.name)
+    pbf.writeStringField(3, city.country)
+    
     if (city.altCountry && city.altCountry !== city.country)
-        pbf.writeStringField(3, city.altCountry)
+        pbf.writeStringField(4, city.altCountry)
 
     if (city.municipality)
-        pbf.writeStringField(4, city.municipality)
+        pbf.writeStringField(5, city.municipality)
 
     if (city.municipalitySubdivision)
-        pbf.writeStringField(5, city.municipalitySubdivision)
+        pbf.writeStringField(6, city.municipalitySubdivision)
 
-    pbf.writeStringField(6, city.featureCode)
-    pbf.writeStringField(7, city.adminCode)
+    pbf.writeStringField(7, city.featureCode)
+    pbf.writeStringField(8, city.adminCode)
 
     if (city.population)
-        pbf.writeVarintField(8, city.population)
+        pbf.writeVarintField(9, city.population)
 
     const lat = Math.round(1e5 * city.lat)
     const lon = Math.round(1e5 * city.lon)
-    pbf.writeSVarintField(9, lat - lastLat)
     pbf.writeSVarintField(10, lon - lastLon)
+    pbf.writeSVarintField(11, lat - lastLat)
+   
+   
     lastLat = lat
     lastLon = lon
 }

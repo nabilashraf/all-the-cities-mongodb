@@ -1,6 +1,6 @@
 # all-the-cities
 
-All the 138,398 cities of the world with a population of at least 1000 inhabitants, in a big JSON array.
+All the 138,398 cities of the world with a population of at least 1000 inhabitants, in a big JSON array that is ready to be imported in MongoDB for `geoSpatialSearch`.
 
 Derived from the [cities-with-1000](https://www.npmjs.com/package/cities-with-1000) npm package, which in turn came from [geonames.org data](http://download.geonames.org/export/dump/).
 
@@ -46,6 +46,23 @@ cities.filter(city => {
 //   lat: 35.16199,
 //   lon: -106.6428
 // }]
+
+```
+
+## Fields available to import
+
+```js
+
+id - Id of the city (same in openWeatherMap)
+name
+altName
+country
+featureCode
+adminCode
+population
+loc: { type: 'Point', coordinates: [0, 0] }
+
+for **GEO JSON data**, a particular format is needed in MongoDB Schema as written in loc field above
 
 ```
 
