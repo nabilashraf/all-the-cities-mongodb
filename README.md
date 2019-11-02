@@ -22,6 +22,7 @@ cities.filter(city => {
 })
 
 // [{
+//   cityId: '5454711',
 //   name: 'Albuquerque',
 //   country: 'US',
 //   altCountry: '',
@@ -31,9 +32,12 @@ cities.filter(city => {
 //   featureCode: 'PPLA2',
 //   adminCode: 'NM',
 //   population: 545852,
-//   lat: 35.08449,
-//   lon: -106.65114
+//   loc: {
+//     type: 'Point',
+//     coordinates: [-106.65114, 35.084] 
+//   }
 // }, {
+//   cityId: '5476960',
 //   name: 'Los Ranchos de Albuquerque',
 //   country: 'US',
 //   altCountry: '',
@@ -43,8 +47,10 @@ cities.filter(city => {
 //   featureCode: 'PPL',
 //   adminCode: 'NM',
 //   population: 6024,
-//   lat: 35.16199,
-//   lon: -106.6428
+//   loc: {
+//     type: 'Point',
+//     coordinates: [-106.6428, 35.16199]
+//   }
 // }]
 
 ```
@@ -62,7 +68,7 @@ None
 
 ## Dev Dependencies
 
-- [cities1000](https://github.com/substack/cities1000): lat/lon, names of cities with over 1000 people
+- [cities-with-1000](https://github.com/nabilashraf/cities1000): lat/lon, names of cities with over 1000 people
 - [tape](https://github.com/substack/tape): tap-producing test harness for node and browsers
 - [split2](https://github.com/mcollina/split2): split a Text Stream into a Line Stream, using Stream 3
 - [through2](https://github.com/rvagg/through2): A tiny wrapper around Node streams2 Transform to avoid explicit subclassing noise
