@@ -11,7 +11,6 @@ Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't 
 ```sh
 npm install all-the-cities --save
 ```
-
 ## Usage
 
 ```js

@@ -1,6 +1,6 @@
 {
   "name": "all-the-cities",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "All the 138,398 cities of the world with a population of at least 1000 inhabitants, in a big JSON array",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/zeke/all-the-cities#readme",
   "devDependencies": {
-    "cities-with-1000": "^1.0.1",
+    "cities-with-1000": "^1.0.4",
     "split2": "^2.0.1",
     "tape": "^4.11.0",
     "through2": "^2.0.5"
